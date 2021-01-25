@@ -1,6 +1,6 @@
 # ws-lambda-redis
 
-A Minimal setup for Web Socket <-> API Gateway <-> Lambda <-> Redis. It pings the Redis server and echoes your Web Socket message.
+A Minimal setup for WebSocket <-> API Gateway <-> Lambda <-> Redis. It pings the Redis server and echoes your WebSocket message.
 
 Does not use CloudFormation. Work with AWS solely through the web console. Only uses Serverless Framework for packaging.
 
@@ -8,7 +8,7 @@ This project has been generated using the `aws-nodejs-typescript` template from 
 
 ## Requirements
 - A WebSocket client ([wscat](https://www.npmjs.com/package/wscat) or a web app)
-- A Gateway WebSocket API
+- An API Gateway configured for WebSockets
 - A Redis server
 
 ## Building, Deployment, and Testing
@@ -58,4 +58,4 @@ Example Test:
 - [@serverless/typescript](https://github.com/serverless/typescript) - provides up-to-date TypeScript definitions for your `serverless.ts` service file
 - [ioredis](https://github.com/luin/ioredis) - Redis client for Node.js, preferred for its TypeScript and Promises API support
 - [middy](https://github.com/middyjs/middy) - middleware engine for Node.Js lambda
-- [@aws-sdk/client-apigatewaymanagementapi](https://github.com/aws/aws-sdk-js-v3/tree/master/clients/client-apigatewaymanagementapi) - used to manage IAM authorization for POST requests to Gateway API
+- [@aws-sdk/client-apigatewaymanagementapi](https://github.com/aws/aws-sdk-js-v3/tree/master/clients/client-apigatewaymanagementapi) - used to manage IAM authorization for POST requests to API Gateway
