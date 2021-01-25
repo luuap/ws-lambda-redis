@@ -12,7 +12,7 @@ import schema from './schema';
 
 const { REDIS_PORT, REDIS_HOST, REDIS_PASSWORD } = process.env;
 
-// handler is src/handler.main
+// Handler is src/handler.main
 const handler: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) => {
 
   console.log(event);
@@ -23,7 +23,7 @@ const handler: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event)
 
   const redis = new Redis({ port: +REDIS_PORT, host: REDIS_HOST, password: REDIS_PASSWORD });
 
-  let response = await redis.ping(); // Should be PONG
+  let response = await redis.ping(); // Should return PONG
 
   await sendCallbackMessage({ connectionId, stage, domainName }, `Response from Redis: ${response}`);
 

@@ -1,6 +1,6 @@
 # ws-lambda-redis
 
-Minimal setup for Web Socket <-> API Gateway <-> Lambda <-> Redis. It pings the Redis server and echoes your Web Socket message.
+A Minimal setup for Web Socket <-> API Gateway <-> Lambda <-> Redis. It pings the Redis server and echoes your Web Socket message.
 
 Does not use CloudFormation. Work with AWS solely through the web console. Only uses Serverless Framework for packaging.
 
