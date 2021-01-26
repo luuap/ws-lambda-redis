@@ -10,7 +10,7 @@ import { middyfy } from '@libs/lambda';
 
 import schema from './schema';
 
-const { REDIS_PORT, REDIS_HOST, REDIS_PASSWORD } = process.env;
+const { REDIS_PORT, REDIS_HOST, REDIS_PASSWORD, AWS_REGION } = process.env;
 
 // Handler is src/handler.main
 const handler: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) => {
@@ -42,7 +42,7 @@ const sendCallbackMessage = async (context: any, message: string) => {
   let apiGatewayManagementApi = new ApiGatewayManagementApiClient({
     apiVersion: '2018-11-29',
     endpoint: `https://${domainName}/${stage}`,
-    region: 'us-east-1'
+    region: AWS_REGION
   });
 
   const params = {
