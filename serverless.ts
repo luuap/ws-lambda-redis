@@ -3,7 +3,7 @@ import type { AWS } from '@serverless/typescript';
 import main from './src';
 
 const serverlessConfiguration: AWS = {
-  service: 'redis-lambda-ping',
+  service: 'ws-lambda-redis',
   frameworkVersion: '2',
   custom: {
     webpack: {
